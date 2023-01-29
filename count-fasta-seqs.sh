@@ -101,3 +101,28 @@ echo "$@"
 
 #Gives the number and name of the fasta file
 #grep -ce ">" -- *.fasta
+#Order is wrong
+
+sum=0
+
+#filepath=`/home/szg0062/Scripting_for_biologists/Exercise1_Git_Intro/au-bootcamp-git-intro/tests/test_in_dir_files/input/*`
+
+
+for filepath in "$@" #correct counts but the path is incorrect
+
+do
+
+FILE=`basename $filepath`
+COUNTS=`grep -ce ">" $filepath`
+#COUNTS=`grep -c ">" *.fasta`
+
+
+echo $COUNTS $FILE
+
+#Adding up the numbers
+sum=`expr $sum + $COUNTS`
+
+done
+
+echo $sum
+
