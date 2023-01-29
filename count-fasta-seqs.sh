@@ -95,4 +95,7 @@ echo "$@"
 # ADD YOUR CODE BELOW:
 
 #Adding comment
+#Testing out grep line on sample data files
+#grep -c ">" example-seqs1.fasta
+#grep -c ">" example-seqs2.fasta
 
