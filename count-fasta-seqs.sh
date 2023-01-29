@@ -99,3 +99,5 @@ echo "$@"
 #grep -c ">" example-seqs1.fasta
 #grep -c ">" example-seqs2.fasta
 
+#Gives the number and name of the fasta file
+#grep -ce ">" -- *.fasta
