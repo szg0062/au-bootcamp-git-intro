@@ -94,6 +94,9 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
+
+
+
 #Adding comment
 #Testing out grep line on sample data files
 #grep -c ">" example-seqs1.fasta
@@ -106,16 +109,19 @@ echo "$@"
 sum=0
 
 #filepath=`/home/szg0062/Scripting_for_biologists/Exercise1_Git_Intro/au-bootcamp-git-intro/tests/test_in_dir_files/input/*`
+#Don't work for a directory
 
-
-for filepath in "$@" #correct counts but the path is incorrect
+for filepath in "$@" #correct counts but the path is printing out as well. Not sure how to take that out. 
 
 do
 
-FILE=`basename $filepath`
-COUNTS=`grep -ce ">" $filepath`
-#COUNTS=`grep -c ">" *.fasta`
+#echo "$@" ###This echo all the files locations
 
+FILE=`basename $filepath`
+#COUNTS=`grep -ce ">" $FILE` ##Outputted all errors no counts when ran script
+#COUNTS=`grep -ce ">" *.fasta`
+
+COUNTS=`grep -ce ">" $filepath`
 
 echo $COUNTS $FILE
 
