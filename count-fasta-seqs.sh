@@ -264,9 +264,8 @@ sum=`expr $sum + $COUNTS`
 
 done
 
-#CTracy comment: Good Job! The sequence paths printing to the first line of the output is caused by a line further up in the code before you get to the part where you add your code.
-#See if you can find the line that is causing that and comment it out so it isn't printing that as the first line! 
-#If you are having a hard time finding it you can look for code that is colored differently (depending on what text editor you use),
-#or think about what commands would cause something to print to your output and look for those at the beginning of a line
+#CTracy comment: So close! The sequence paths printing to the first line of the output is caused by a line further up in the code before you get to the part where you add your code.
+#This is what is causing it to fail the tests when you run "sh run_tests.sh"
+#See if you can fix that and push your changes
 
 
