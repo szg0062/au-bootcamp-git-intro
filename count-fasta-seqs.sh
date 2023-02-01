@@ -63,7 +63,7 @@
 # files that were 'given to' this script. The variable "$@" will be very useful
 # for this. Let's take a look at what it gives us:
 
-echo "$@"
+# echo "$@"
 
 # How are you going to work with each file path?
 # HINT: for loop (remember "for do done"?)
@@ -197,7 +197,7 @@ echo $sum
 # files that were 'given to' this script. The variable "$@" will be very useful
 # for this. Let's take a look at what it gives us:
 
-echo "$@"
+# echo "$@"
 
 # How are you going to work with each file path?
 # HINT: for loop (remember "for do done"?)
@@ -240,32 +240,33 @@ echo "$@"
 #grep -ce ">" -- *.fasta
 #Order is wrong
 
-sum=0
+#sum=0
 
 #filepath=`/home/szg0062/Scripting_for_biologists/Exercise1_Git_Intro/au-bootcamp-git-intro/tests/test_in_dir_files/input/*`
 #Don't work for a directory
 
-for filepath in "$@" #correct counts but the path is printing out as well. Not sure how to take that out. 
+#for filepath in "$@" #correct counts but the path is printing out as well. Not sure how to take that out. 
 
-do
+#do
 
 #echo "$@" ###This echo all the files locations
 
-FILE=`basename $filepath`
+#FILE=`basename $filepath`
 #COUNTS=`grep -ce ">" $FILE` ##Outputted all errors no counts when ran script
 #COUNTS=`grep -ce ">" *.fasta`
 
-COUNTS=`grep -ce ">" $filepath`
+#COUNTS=`grep -ce ">" $filepath`
 
-echo $COUNTS $FILE
+#echo $COUNTS $FILE
 
 #Adding up the numbers
-sum=`expr $sum + $COUNTS`
+#sum=`expr $sum + $COUNTS`
 
-done
+#done
 
 #CTracy comment: So close! The sequence paths printing to the first line of the output is caused by a line further up in the code before you get to the part where you add your code.
 #This is what is causing it to fail the tests when you run "sh run_tests.sh"
 #See if you can fix that and push your changes
 
 
+#szg0062 comment. I got it coreected. Thank you! 
